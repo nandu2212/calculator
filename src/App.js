@@ -1,18 +1,18 @@
 import React,{useState} from "react"
 import './App.css'
 function App() {
-  const [input,setinput]=useState(0)
-  const handler=(e)=>{
-setinput(e.target.value)
-  }
+  const [input,setinput]=useState(" ")
+//   const handler=(e)=>{
+// setinput(e.target.value)
+//   }
   const result=()=>{
     setinput(eval(input))
   }
   return (
 <>
 <div>
-<input type="text" value={input} name="input" onChange={handler} />
-<button onClick={()=>{setinput(0)}}>C</button>
+<input type="text" value={input} name="input" />
+<button onClick={()=>{setinput(" ")}}>C</button>
 <div>
 <button onClick={()=>{setinput(input+"1")}}>1</button>
 <button onClick={()=>{setinput(input+"2")}}>2</button>
